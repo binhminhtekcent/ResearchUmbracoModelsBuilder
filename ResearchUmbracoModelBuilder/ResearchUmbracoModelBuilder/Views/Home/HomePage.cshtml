@@ -1,0 +1,33 @@
+﻿@inherits UmbracoViewPage<ResearchUmbracoModelBuilder.Models.Home>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>
+        @Model.PageTitle
+    </title>
+</head>
+<body>
+    <div>
+        <div>
+            Body Text: @Model.BodyText
+        </div>
+        <div>
+            @foreach (var item in Model.ListNews)
+            {
+                <div>
+                    Title: @item.PageTitle
+                </div>
+                <div>
+                    Title: @item.BodyText
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>
